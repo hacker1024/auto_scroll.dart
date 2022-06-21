@@ -1,0 +1,20 @@
+name: auto_scroll
+description: A flexible auto-scrolling widget for Flutter.
+version: 0.1.0
+homepage: https://github.com/hacker1024/auto_scroll.dart
+
+environment:
+  sdk: ">=2.17.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  resize_observer:
+    git:
+      url: https://github.com/hacker1024/resize_observer.dart.git
+      ref: 8d4fc08c68a8cdc80b1041ae54f5fc2bc86f74f6
+
+dev_dependencies:
+  lint: ^1.8.2
+
+flutter:
