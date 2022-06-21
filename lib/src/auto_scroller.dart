@@ -1,6 +1,6 @@
 import 'package:auto_scroll/src/auto_scroll_controller.dart';
-import 'package:auto_scroll/src/resize_observer.dart';
 import 'package:flutter/widgets.dart';
+import 'package:resize_observer/resize_observer.dart';
 
 /// A function that builds a [ScrollView] widget, using the provided
 /// [controller].
