@@ -59,10 +59,6 @@ class AutoScrollController extends ChangeNotifier
     anchored = true;
     // https://stackoverflow.com/a/67561421
     while (true) {
-      // If the scroll controller client has detached during the scroll process,
-      // abort.
-      if (!scrollController.hasClients) return;
-
       // Move to the largest possible scroll position.
       final targetPosition =
           _validateMaxScrollExtent(scrollController.position.maxScrollExtent);
@@ -70,6 +66,10 @@ class AutoScrollController extends ChangeNotifier
 
       // Wait for the frame to complete.
       await WidgetsBinding.instance.endOfFrame;
+
+      // If the scroll controller client has detached during the scroll process,
+      // abort.
+      if (!scrollController.hasClients) return;
 
       // If the largest possible scroll position has remained the same, then
       // break.
