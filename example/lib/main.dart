@@ -11,7 +11,7 @@ void main() {
 }
 
 class AutoScrollerExample extends StatefulWidget {
-  const AutoScrollerExample({Key? key}) : super(key: key);
+  const AutoScrollerExample({super.key});
 
   @override
   State<AutoScrollerExample> createState() => _AutoScrollerExampleState();

@@ -51,7 +51,7 @@ class AutoScroller<T> extends StatefulWidget {
   final AutoScrollWidgetBuilder builder;
 
   const AutoScroller({
-    Key? key,
+    super.key,
     this.controller,
     required this.lengthIdentifier,
     this.duration = defaultDuration,
@@ -59,7 +59,7 @@ class AutoScroller<T> extends StatefulWidget {
     this.anchorThreshold = 0,
     this.startAnchored = true,
     required this.builder,
-  }) : super(key: key);
+  });
 
   @override
   State<AutoScroller<T>> createState() => AutoScrollerState();
