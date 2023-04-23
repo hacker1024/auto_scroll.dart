@@ -44,7 +44,7 @@ class AutoScroller<T> extends StatefulWidget {
   /// Also see: [lengthIdentifier].
   final double anchorThreshold;
 
-  /// True if the [ScrollView] should initialy be anchored to the bottom.
+  /// True if the [ScrollView] should initially be anchored to the bottom.
   final bool startAnchored;
 
   /// A callback that builds the [ScrollView] that is being auto-scrolled.
