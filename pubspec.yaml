@@ -9,10 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  resize_observer:
-    git:
-      url: https://github.com/hacker1024/resize_observer.dart.git
-      ref: 8d4fc08c68a8cdc80b1041ae54f5fc2bc86f74f6
+  flutter_resize_observer: ^0.1.0
 
 dev_dependencies:
   lint: ^1.8.2

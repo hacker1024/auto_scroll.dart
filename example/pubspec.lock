@@ -27,6 +27,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_resize_observer:
+    dependency: transitive
+    description:
+      name: flutter_resize_observer
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.0"
   lint:
     dependency: "direct dev"
     description:
@@ -48,15 +55,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.7.0"
-  resize_observer:
-    dependency: transitive
-    description:
-      path: "."
-      ref: "8d4fc08c68a8cdc80b1041ae54f5fc2bc86f74f6"
-      resolved-ref: "8d4fc08c68a8cdc80b1041ae54f5fc2bc86f74f6"
-      url: "https://github.com/hacker1024/resize_observer.dart.git"
-    source: git
-    version: "0.1.0"
   sky_engine:
     dependency: transitive
     description: flutter
