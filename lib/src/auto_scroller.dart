@@ -2,9 +2,9 @@ import 'package:auto_scroll/src/auto_scroll_controller.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_resize_observer/flutter_resize_observer.dart';
 
-/// A function that builds a [ScrollView] widget, using the provided
+/// A function that builds a scrolling widget, using the provided
 /// [controller].
-typedef AutoScrollWidgetBuilder = ScrollView Function(
+typedef AutoScrollWidgetBuilder = Widget Function(
   BuildContext context,
   ScrollController scrollController,
 );
@@ -18,6 +18,9 @@ class AutoScroller<T> extends StatefulWidget {
 
   /// An optional custom [AutoScrollController] to use.
   final AutoScrollController? controller;
+
+  /// The axis that the child scrolls in.
+  final Axis scrollAxis;
 
   /// An identifier representing the current length of the [ScrollView].
   ///
@@ -52,6 +55,7 @@ class AutoScroller<T> extends StatefulWidget {
 
   const AutoScroller({
     super.key,
+    this.scrollAxis = Axis.vertical,
     this.controller,
     required this.lengthIdentifier,
     this.duration = defaultDuration,
@@ -120,7 +124,7 @@ class AutoScrollerState<T> extends State<AutoScroller<T>> {
         if (!_controller.anchored) return;
 
         final bool scrollDimensionChanged;
-        switch (scrollView.scrollDirection) {
+        switch (widget.scrollAxis) {
           case Axis.horizontal:
             scrollDimensionChanged = oldSize.width != newSize.width;
             break;
