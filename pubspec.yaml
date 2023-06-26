@@ -12,6 +12,6 @@ dependencies:
   flutter_resize_observer: ^0.1.0
 
 dev_dependencies:
-  lint: ^2.0.1
+  lint: ^2.1.2
 
 flutter:
