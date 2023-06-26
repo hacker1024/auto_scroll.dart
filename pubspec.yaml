@@ -1,6 +1,6 @@
 name: auto_scroll
 description: A flexible auto-scrolling widget for Flutter.
-version: 0.1.0
+version: 0.2.0
 homepage: https://github.com/hacker1024/auto_scroll.dart
 
 environment:
