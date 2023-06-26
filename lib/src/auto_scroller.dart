@@ -123,15 +123,10 @@ class AutoScrollerState<T> extends State<AutoScroller<T>> {
       onResized: (Size oldSize, Size newSize) {
         if (!_controller.anchored) return;
 
-        final bool scrollDimensionChanged;
-        switch (widget.scrollAxis) {
-          case Axis.horizontal:
-            scrollDimensionChanged = oldSize.width != newSize.width;
-            break;
-          case Axis.vertical:
-            scrollDimensionChanged = oldSize.height != newSize.height;
-            break;
-        }
+        final scrollDimensionChanged = switch (widget.scrollAxis) {
+          Axis.horizontal => oldSize.width != newSize.width,
+          Axis.vertical => oldSize.height != newSize.height,
+        };
 
         if (scrollDimensionChanged) {
           WidgetsBinding.instance
